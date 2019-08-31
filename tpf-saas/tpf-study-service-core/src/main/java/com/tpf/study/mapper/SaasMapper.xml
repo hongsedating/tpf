@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tpf.study.mapper.SaasMapper" >
+    <select id="getAllSaas" resultMap="saasMap">
+        SELECT id, saas_name, saas_alias, saas_dbconfig FROM tpf_saas
+    </select>
+    <resultMap id="saasMap" type="saasBean">
+        <result property="id" column="id"/>
+        <result property="saasName" column="saas_name"/>
+        <result property="saasAlias" column="saas_alias"/>
+        <result property="saasDBConfig" column="saas_dbconfig"/>
+    </resultMap>
+</mapper>
